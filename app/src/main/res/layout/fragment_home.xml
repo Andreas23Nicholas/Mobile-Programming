@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/cvtblue"
+    tools:context=".fragments.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="-10dp"
+            android:src="@drawable/transparent_logo"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardjudul"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="30dp"
+            app:cardCornerRadius="10dp"
+            android:elevation="10dp"
+            android:layout_below="@+id/logo">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Asia Covid-19 Statistic"
+                android:fontFamily="@font/lato_bold"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/cardjudul"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card01"
+                android:layout_width="0dp"
+                android:layout_weight=".75"
+                android:layout_height="250dp"
+                app:cardCornerRadius="10dp"
+                android:elevation="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
+
+                <org.eazegraph.lib.charts.PieChart
+                    android:layout_gravity="center"
+                    android:id="@+id/piechart"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="235dp"
+                    android:layout_height="200dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card02"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                app:cardCornerRadius="10dp"
+                android:elevation="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/pieLayout"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:background="#FF9800"/>
+
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/lato_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Case"
+                                android:textSize="13dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:background="#F44336"/>
+
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/lato_black"
+                                android:textSize="13dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Deaths"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:background="#11D319"/>
+
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/lato_black"
+                                android:textSize="13dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Recovered"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="10dp"
+            android:elevation="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/txtLastUpdated"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_light"
+                android:textStyle="bold"
+                android:text="Last Updated"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:elevation="10dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/labelcase"
+                        android:textAlignment="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_black"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:textSize="20dp"
+                        android:text="Number of Confirmed Cases"/>
+
+                    <TextView
+                        android:id="@+id/txtTotalCase"
+                        android:layout_gravity="center"
+                        android:textColor="@color/cases"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_bold"
+                        android:textSize="20dp"
+                        android:text="Getting Data..."/>
+
+                </LinearLayout>
+
+                
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_weight=".50"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/labeldeath"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_black"
+                            android:layout_marginTop="10dp"
+                            android:textAlignment="center"
+                            android:layout_gravity="center"
+                            android:textSize="20dp"
+                            android:text="Deaths"/>
+
+                        <TextView
+                            android:id="@+id/txtTotalDeath"
+                            android:layout_gravity="center"
+                            android:textColor="@color/death"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:textSize="20dp"
+                            android:text="Getting Data..."/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="0dp"
+                    android:layout_weight=".50"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/labelrec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_black"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"
+                            android:textSize="20dp"
+                            android:text="Recovered"/>
+
+                        <TextView
+                            android:id="@+id/txtTotalRecovered"
+                            android:layout_gravity="center"
+                            android:textColor="@color/recovered"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:textSize="20dp"
+                            android:text="Getting Data..."/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                
+                
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

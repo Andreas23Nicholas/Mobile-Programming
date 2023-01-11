@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search"
+        android:title="search country name..."
+        android:iconTint="@color/black"
+        app:actionViewClass="android.widget.SearchView"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always|collapseActionView"/>
+
+    <item
+        android:id="@+id/sortAsc"
+        android:title="Sort Ascending"
+        android:iconTint="@color/black"
+        android:icon="@drawable/ic_asc"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/sortDesc"
+        android:title="Sort Descending"
+        android:iconTint="@color/black"
+        android:icon="@drawable/ic_desc"
+        app:showAsAction="ifRoom"/>
+
+</menu>

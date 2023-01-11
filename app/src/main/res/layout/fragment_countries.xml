@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.CountriesFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/listhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="30dp">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+
+        
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_weight=".37"
+                    android:layout_height="match_parent"
+                    android:text="Countries"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_weight=".21"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Cases"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_weight=".21"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Deaths"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_weight=".21"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Recovered"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCountries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listhead"
+        tools:listitem="@layout/country_list_item"/>
+
+</RelativeLayout>
